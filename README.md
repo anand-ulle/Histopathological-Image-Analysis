@@ -31,3 +31,33 @@ You'll follow these steps:
   <li>Evaluating the model accuracy</li>
         </font>
 </ol>
+
+<h2 align = "center"><font color='black'> <b>Histopathological Image Classification using fastai</b></font></h2> <h4 align = "right"><font color='purple'> DSML@2021</font></h4>
+## <font color='blue'> <b>**Introduction** </b></font>
+This dataset comes from Kather, Jakob Nikolas. (2019). Histological images for MSI vs. MSS classification in gastrointestinal cancer, FFPE samples [Data set]. Zenodo. http://doi.org/10.5281/zenodo.2530835
+
+Much of the information in the description come either from the dataset description or the scientific article using it to predict MSI: Microsatellite instability determines whether patients with gastrointestinal cancer respond exceptionally well to immunotherapy. However, in clinical practice, not every patient is tested for MSI, because this requires additional genetic or immunohistochemical tests. This repository contains 192312 unique image patches derived from histological images of colorectal cancer and gastric cancer patients in the TCGA cohort (original whole slide SVS images are freely available at https://portal.gdc.cancer.gov/). All images in this repository are derived from formalin-fixed paraffin-embedded (FFPE) diagnostic slides ("DX" at the GDC data portal). This is explained well in this blog: http://www.andrewjanowczyk.com/download-tcga-digital-pathology-images-ffpe/
+
+## <font color='blue'>**The problem statement**</b></font>
+
+MSI: Microsatellite instability determines whether patients with gastrointestinal cancer respond exceptionally well to immunotherapy.
+
+## <font color='blue'>**What's there..**</b></font>
+
+<ol>
+    <font color='blue'>
+       <li>All SVS slides were preprocessed as follows</li>
+<li>Automatic detection of tumor</li>
+
+<li>Resizing to 224 px x 224 px at a resolution of 0.5 µm/px</li>
+
+<li>Color normalization with the Macenko method (Macenko et al., 2009, http://wwwx.cs.unc.edu/~mn/sites/default/files/macenko2009.pdf)</li>
+
+<li>Assignment of patients to either "MSS" (microsatellite stable) or "MSIMUT" (microsatellite instable or highly mutated)</li>
+
+<li>Reformat the original images to JPG format (using bash command mogrify)</li>
+
+## <font color='blue'>**Acknowledgements**</b></font>
+Thanks to Jakob Nikolas Kather for the paper and the [github page] (https://github.com/jnkather/MSIfromHE)
+
+
